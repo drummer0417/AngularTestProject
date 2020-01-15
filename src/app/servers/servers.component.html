@@ -4,6 +4,10 @@
 <!--  next line is equal to above line -->
 <p [innerText]="allowAddNewServer"></p>
 
+
+<p>The server creation status is: {{serverCreationStatus}} </p>
+<app-server></app-server>
+
 <label>Server name:</label>
 
 <!-- <input 
@@ -23,6 +27,3 @@
     (click)="onServerCreation()"
     
 >Add Server</button>
-
-<p>The server creation status is: {{serverCreationStatus}} </p>
-<app-server></app-server>

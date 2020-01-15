@@ -1,0 +1,15 @@
+<p>users works!</p>
+
+
+<hr>
+<label Username></label>
+<input 
+    type="text" 
+    class="form-control"
+    [(ngModel)]="username">
+<p>Username is {{username}} </p>
+<button
+    class="btn btn-primary" 
+    [disabled]="username.length == 0"
+    (click)="onResetUsername()"
+>Clear</button>
