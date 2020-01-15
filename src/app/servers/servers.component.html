@@ -1,0 +1,28 @@
+
+<p>servers works!</p>
+<p>Allow new server is {{allowAddNewServer}} </p>
+<!--  next line is equal to above line -->
+<p [innerText]="allowAddNewServer"></p>
+
+<label>Server name:</label>
+
+<!-- <input 
+    type="text" 
+    class="form-control"
+    (input)="onUpdateServerName($event)"> -->
+<!-- The input elelment below replaces the one above as ngModel supports two way data binding -->
+    <input 
+    type="text" 
+    class="form-control"
+    [(ngModel)]="serverName">
+
+<p>Servername {{serverName}} </p>
+
+<button 
+    class="btn btn-primary" [disabled]="!allowAddNewServer"
+    (click)="onServerCreation()"
+    
+>Add Server</button>
+
+<p>The server creation status is: {{serverCreationStatus}} </p>
+<app-server></app-server>
